@@ -7,11 +7,20 @@ const userSchema = mongoose.Schema({
         required: true,
         trim: true
     },
+    username: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    address: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true,
         trim: true,
-        lowecase: true,
+        lowercase: true,
         unique: true,
         validate(value){
             if(!validator.isEmail(value)){
@@ -23,7 +32,7 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        minlength: true,
+        minlength: 7,
         validate(value){
             if(value.toLowerCase().includes('password')){
                 throw new Error('Password cannot be set as password!');
