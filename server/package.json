@@ -1,0 +1,30 @@
+{
+  "name": "online-store-server",
+  "version": "1.0.0",
+  "description": "Rest api for handling requests for online-store app.",
+  "main": "src/server.js",
+  "scripts": {
+    "start:server": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafahalilovic/online-store.git"
+  },
+  "author": "Mustafa Halilović",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafahalilovic/online-store/issues"
+  },
+  "homepage": "https://github.com/mustafahalilovic/online-store#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0",
+    "validator": "^13.9.0"
+  }
+}
