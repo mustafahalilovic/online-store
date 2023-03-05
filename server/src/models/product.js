@@ -5,8 +5,12 @@ const validator = require('validator');
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true,
-        trim: true
+        required: true
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     },
     price:{
         type: Number,
@@ -19,8 +23,7 @@ const productSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: true,
-        trim: true
+        required: true
     }
 });
 
